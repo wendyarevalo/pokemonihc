@@ -9,7 +9,7 @@ public class login : MonoBehaviour {
     public InputField inputPassword;
     
 
-    string loginUserURL = "http://localhost/db_test/loginUser.php";
+    string loginUserURL = "https://ihcmon.000webhostapp.com/loginUser.php";
 
     // Use this for initialization
     void Start () {

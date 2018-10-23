@@ -8,7 +8,7 @@ public class dataInsert : MonoBehaviour {
     public string inputPassword;
     public string inputEmail;
 
-    string createUserURL = "http://localhost/db_test/insertUser.php";
+    string createUserURL = "https://ihcmon.000webhostapp.com/insertUser.php";
 	// Use this for initialization
 	void Start () {
 		
