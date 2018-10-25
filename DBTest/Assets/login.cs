@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class login : MonoBehaviour {
 
-    public InputField inputUsername;
-    public InputField inputPassword;
-    
+    public InputField inputNoControl;
+    public InputField inputNip;
+
+
 
     string loginUserURL = "https://ihcmon.000webhostapp.com/loginUser.php";
 
@@ -18,27 +20,39 @@ public class login : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
 
-        
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-           StartCoroutine(LoginToDB(inputUsername.text, inputPassword.text));
-        }
+    public void Logear()
+    {
+        StartCoroutine(LoginToDB(inputNoControl.text, inputNip.text));
     }
 
-    public void Logear() {
-        StartCoroutine(LoginToDB(inputUsername.text, inputPassword.text));
-    }
-
-    IEnumerator LoginToDB(string username, string password) {
+    IEnumerator LoginToDB(string no_control, string nip)
+    {
         WWWForm form = new WWWForm();
-        form.AddField("userPost", username);
-        form.AddField("passPost", password);
+        form.AddField("no_controlPost", no_control);
+        form.AddField("nipPost", nip);
 
         WWW www = new WWW(loginUserURL, form);
 
         yield return www;
 
         Debug.Log(www.text);
+
+        if (www.text.Equals("login success")) {
+            SceneManager.LoadScene("GameScene");
+        }
+        else if (www.text.Equals("user not found")){
+            
+        }
+        else{
+           
+        }
+        
+    }
+
+    public void IrRegistro() {
+        SceneManager.LoadScene("RegistroScene");
     }
 }
