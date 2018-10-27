@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: fbfc0649254687042b541cd20d092d9d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Teko
+  fontNames:
+  - Teko
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9c9d4df022fb3fa449faf9a3aba9f31f, type: 3}
+  - {fileID: 12800000, guid: 951f4fb10d3fa0842999efd7db5dde30, type: 3}
+  - {fileID: 12800000, guid: 1db52e6dbcc3ad64394a32111c8f2ff0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
