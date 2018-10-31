@@ -1,1 +1,0 @@
-The textures applied to the model in your 3d application might appear not to fit right. Depending on your software, it may be necessary to flip the textures vertically.
