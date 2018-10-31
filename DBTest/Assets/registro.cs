@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class registro : MonoBehaviour {
 
 
-    public InputField inputNombre;
-    public InputField inputNoControl;
-    public InputField inputNip;
+    public TMP_InputField inputNombre;
+    public TMP_InputField inputNoControl;
+    public TMP_InputField inputNip;
     string createUserURL = "https://ihcmon.000webhostapp.com/insertUser.php";
 
     // Use this for initialization

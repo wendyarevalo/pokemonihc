@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class login : MonoBehaviour {
 
-    public InputField inputNoControl;
-    public InputField inputNip;
+    public TMP_InputField inputNoControl;
+    public TMP_InputField inputNip;
 
 
 
