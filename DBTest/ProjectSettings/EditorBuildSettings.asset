@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AtraparPony.unity
     guid: dbbe30bc427126c44ad2a1b587b0a559
+  - enabled: 1
+    path: Assets/Scenes/QuizVF.unity
+    guid: 42733462cbc32034da6517cd8d3c8fa0
   m_configObjects: {}
