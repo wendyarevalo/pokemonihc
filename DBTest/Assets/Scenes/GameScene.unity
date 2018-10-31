@@ -293,6 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 281699930}
+  - component: {fileID: 281699931}
   m_Layer: 0
   m_Name: ponyIntroTics
   m_TagString: Untagged
@@ -307,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 281699929}
   m_LocalRotation: {x: -0, y: -0.9727694, z: -0, w: -0.23177522}
-  m_LocalPosition: {x: 387, y: 248, z: 70}
+  m_LocalPosition: {x: 93, y: 120, z: 39}
   m_LocalScale: {x: 5.408697, y: 5.408697, z: 5.408697}
   m_Children:
   - {fileID: 1821902651}
@@ -319,6 +320,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -206.803, z: 0}
+--- !u!65 &281699931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281699929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 35.53739, y: 67.03189, z: 49.739723}
+  m_Center: {x: 30.558628, y: 16.418617, z: 46.731525}
 --- !u!4 &301169959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fcbeab9310521c44c9d85e3ef3760ff5,
@@ -1158,6 +1171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1296041866}
+  - component: {fileID: 1296041867}
   m_Layer: 0
   m_Name: ponyFundProg
   m_TagString: Untagged
@@ -1172,7 +1186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296041865}
   m_LocalRotation: {x: -0, y: -0.91536045, z: -0, w: 0.40263537}
-  m_LocalPosition: {x: 931, y: 118, z: -273}
+  m_LocalPosition: {x: 1062, y: 118, z: -153}
   m_LocalScale: {x: 5.4086967, y: 5.4086967, z: 5.4086967}
   m_Children:
   - {fileID: 1842780438}
@@ -1184,6 +1198,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -132.514, z: 0}
+--- !u!65 &1296041867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296041865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.166409, y: 71.716415, z: 59.493053}
+  m_Center: {x: 29.05725, y: 18.598515, z: 50.13421}
 --- !u!1001 &1314162789
 Prefab:
   m_ObjectHideFlags: 0
@@ -1339,8 +1365,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1522290693}
+  - component: {fileID: 1522290694}
   m_Layer: 0
-  m_Name: pony
+  m_Name: ponyMates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,7 +1380,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522290692}
   m_LocalRotation: {x: -0.002750357, y: -0.31934738, z: -0.039799646, w: 0.9467976}
-  m_LocalPosition: {x: 233, y: 223, z: -479}
+  m_LocalPosition: {x: 441, y: 198, z: -374}
   m_LocalScale: {x: 74.698135, y: 74.698135, z: 74.698135}
   m_Children:
   - {fileID: 348756071}
@@ -1365,6 +1392,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -1.7550001, y: -37.213, z: -4.223}
+--- !u!65 &1522290694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522290692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0836735, y: 4.734271, z: 4.913804}
+  m_Center: {x: 0.28758028, y: -0.21542801, z: 2.108385}
 --- !u!4 &1540309905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fad390457f074184b90eee0494ed5bde,
@@ -1375,6 +1414,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fcbeab9310521c44c9d85e3ef3760ff5,
     type: 3}
   m_PrefabInternal: {fileID: 76278739}
+--- !u!1 &1629754824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629754826}
+  - component: {fileID: 1629754825}
+  m_Layer: 0
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1629754825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629754824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ef5ccba17361d4686d1d730b29f4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1629754826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629754824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 324.22498, y: 230.95325, z: -458.3107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689776611
 GameObject:
   m_ObjectHideFlags: 0
