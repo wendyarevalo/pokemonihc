@@ -44,6 +44,23 @@ ModelImporter:
     2100004: 13
     2100006: 21
     2100008: Default
+    2100010: Box892_0Mat
+    2100012: Box893_1Mat
+    2100014: Box894_2Mat
+    2100016: Box895_3Mat
+    2100018: Box896_4Mat
+    2100020: Box897_2Mat
+    2100022: Box898_6Mat
+    2100024: Box899_7Mat
+    2100026: Box900_8Mat
+    2100028: Box901_9Mat
+    2100030: Box902_16Mat
+    2100032: Circle03_11Mat
+    2100034: Line642_10Mat
+    2100036: Line643_14Mat
+    2100038: Line644_15Mat
+    2100040: Loft05_12Mat
+    2100042: Loft06_12Mat
     2300000: Box892_0
     2300002: Box893_1
     2300004: Box894_2
@@ -167,7 +184,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
