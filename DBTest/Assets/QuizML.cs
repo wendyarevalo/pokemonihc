@@ -16,7 +16,7 @@ public class QuizML : MonoBehaviour {
     private string resp;
     public Text mensaje;
     public PreguntaM mypregunta;
-    private string UrlPregunta = "http://localhost/respaldo/consultas.php";
+    private string UrlPregunta = "http://ihcmon.000webhostapp.com/consultas.php";
     // Use this for initialization
     IEnumerator Start()
     {

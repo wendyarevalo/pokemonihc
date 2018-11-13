@@ -9,7 +9,7 @@ public class VFScript : MonoBehaviour {
     public Text mensaje;
     private string resp;
     public Pregunta mypregunta;
-    private string UrlPregunta= "http://localhost/respaldo/consultas.php";
+    private string UrlPregunta= "http://ihcmon.000webhostapp.com/consultas.php";
     // Use this for initialization
     IEnumerator Start()
     {
