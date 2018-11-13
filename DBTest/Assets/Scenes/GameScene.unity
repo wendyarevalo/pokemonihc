@@ -294,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 281699930}
   - component: {fileID: 281699931}
+  - component: {fileID: 281699932}
   m_Layer: 0
   m_Name: ponyIntroTics
   m_TagString: Untagged
@@ -332,6 +333,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.53739, y: 67.03189, z: 49.739723}
   m_Center: {x: 30.558628, y: 16.418617, z: 46.731525}
+--- !u!114 &281699932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281699929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138cb2ea19b2bf246a643f9db56cd1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idPony: 3
 --- !u!4 &301169959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fcbeab9310521c44c9d85e3ef3760ff5,
@@ -1172,6 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296041866}
   - component: {fileID: 1296041867}
+  - component: {fileID: 1296041868}
   m_Layer: 0
   m_Name: ponyFundProg
   m_TagString: Untagged
@@ -1210,6 +1224,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 27.166409, y: 71.716415, z: 59.493053}
   m_Center: {x: 29.05725, y: 18.598515, z: 50.13421}
+--- !u!114 &1296041868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296041865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138cb2ea19b2bf246a643f9db56cd1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idPony: 1
 --- !u!1001 &1314162789
 Prefab:
   m_ObjectHideFlags: 0
@@ -1366,6 +1392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522290693}
   - component: {fileID: 1522290694}
+  - component: {fileID: 1522290695}
   m_Layer: 0
   m_Name: ponyMates
   m_TagString: Untagged
@@ -1404,6 +1431,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0836735, y: 4.734271, z: 4.913804}
   m_Center: {x: 0.28758028, y: -0.21542801, z: 2.108385}
+--- !u!114 &1522290695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522290692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138cb2ea19b2bf246a643f9db56cd1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idPony: 2
 --- !u!4 &1540309905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fad390457f074184b90eee0494ed5bde,
@@ -1436,7 +1475,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629754824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4ef5ccba17361d4686d1d730b29f4dc, type: 3}
   m_Name: 

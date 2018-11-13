@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PonyClick : MonoBehaviour {
 
+
+   
     // Use this for initialization
     void Start()
     {
