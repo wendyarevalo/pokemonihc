@@ -48,7 +48,7 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
-            SceneManager.LoadScene("AtraparPony");
+            SceneManager.LoadScene("GameScene");
         }
     }
     public void btnv()
@@ -63,7 +63,7 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
-            SceneManager.LoadScene("AtraparPony");
+            SceneManager.LoadScene("GameScene");
 
         }
     }

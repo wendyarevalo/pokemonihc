@@ -9,16 +9,28 @@ public class kardexMostrar : MonoBehaviour {
     public UnityEngine.UI.Image[] Images;
     public UnityEngine.UI.Text[] Texts;
 
-
     string MateriaUrl = "http://ihcmon.000webhostapp.com/consultas.php?funcion=materias_usuario&parametros=14121153";
 
     // Use this for initialization
     void Start () {
 
-        StartCoroutine(MostrarKardex("14121153"));
-
+        
+        
     }
 
+    public void iniciar() {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+            StartCoroutine(MostrarKardex("14121153"));
+        }
+        else
+        {
+            gameObject.SetActive(true);
+            StartCoroutine(MostrarKardex("14121153"));
+        }
+    }
+    
     IEnumerator MostrarKardex(string v)
     {
 
