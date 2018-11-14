@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuizVF.unity
     guid: 42733462cbc32034da6517cd8d3c8fa0
+  - enabled: 1
+    path: Assets/Scenes/QuizMult.unity
+    guid: d2c673118639efd4c8cb2996604a2ed2
+  - enabled: 1
+    path: Assets/Scenes/QuizRel.unity
+    guid: a78d67ba07ba7004d9f97323992f8346
+  - enabled: 1
+    path: Assets/Scenes/SpawningScene.unity
+    guid: 44317f73238f86d43a35a022db96451b
   m_configObjects: {}

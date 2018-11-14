@@ -42,7 +42,7 @@ public class login : MonoBehaviour {
         Debug.Log(www.text);
 
         if (www.text.Equals("login success")) {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("SpawningScene");
         }
         else if (www.text.Equals("user not found")){
             
