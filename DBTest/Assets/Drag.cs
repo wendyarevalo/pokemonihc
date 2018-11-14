@@ -8,7 +8,7 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler , IEndDragHan
 {
     public void OnBeginDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -18,6 +18,6 @@ public class Drag : MonoBehaviour, IDragHandler, IBeginDragHandler , IEndDragHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

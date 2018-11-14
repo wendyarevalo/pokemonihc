@@ -17,7 +17,7 @@ public class VFScript : MonoBehaviour {
         pregunta.text = "cargando ...";
         WWWForm form = new WWWForm();
         form.AddField("funcion", "consultar_preguntaVF");
-        form.AddField("parametros", "{\"materia\": 2}");
+        form.AddField("parametros", "{\"materia\":"+ ApplicationModel.ponyActual+"}");
 
         WWW www = new WWW(UrlPregunta, form);
         yield return www;

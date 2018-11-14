@@ -24,7 +24,7 @@ public class QuizML : MonoBehaviour {
         pregunta.text = "cargando ...";
         WWWForm form = new WWWForm();
         form.AddField("funcion", "consultar_preguntaMultiple");
-        form.AddField("parametros", "{\"materia\": 3}");
+        form.AddField("parametros", "{\"materia\":"+ ApplicationModel.ponyActual+"}");
 
         WWW www = new WWW(UrlPregunta, form);
         yield return www;

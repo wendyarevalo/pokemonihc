@@ -13,6 +13,7 @@ public class AtraparPony : MonoBehaviour {
     // Use this for initialization
     void Start () {
         int idPony = ApplicationModel.ponyId;
+        ApplicationModel.ponyActual = idPony;
         showPony(idPony);
 	}
 
