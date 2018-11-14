@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Drag : MonoBehaviour
+public class Drag : MonoBehaviour, IDragHandler IBeginDragHandler , IEndDragHandler
 {
-
-    // Use this for initialization
-    float distance = 10;
-    void OnMouseDrag()
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        Vector3 mouseposition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mouseposition);
-        transform.position = objPosition;
+        throw new System.NotImplementedException();
+    }
 
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        throw new System.NotImplementedException();
     }
 }
