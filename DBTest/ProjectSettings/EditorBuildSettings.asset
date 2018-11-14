@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/QuizRel.unity
     guid: a78d67ba07ba7004d9f97323992f8346
+  - enabled: 1
+    path: Assets/Scenes/SpawningScene.unity
+    guid: 44317f73238f86d43a35a022db96451b
   m_configObjects: {}

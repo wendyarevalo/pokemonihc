@@ -28,6 +28,11 @@ public class registro : MonoBehaviour {
         StartCoroutine(CreateUser(inputNombre.text, inputNoControl.text, inputNip.text));
     }
 
+    public void Volver()
+    {
+        SceneManager.LoadScene("LoginScene");
+    }
+
     IEnumerator CreateUser(string nombre, string no_control, string nip)
     {
         WWWForm form = new WWWForm();

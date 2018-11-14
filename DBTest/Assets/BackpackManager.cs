@@ -41,7 +41,11 @@ public class BackpackManager : MonoBehaviour
 
         if (atrapado)
         {
-            SceneManager.LoadScene("QuizVF");
+            if (ApplicationModel.primeraMat == 0)
+            {
+                ApplicationModel.primeraMat++;
+            }
+            SceneManager.LoadScene("SpawningScene");
         }
 
         //return null;
