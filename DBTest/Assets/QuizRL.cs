@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 public class QuizRL : MonoBehaviour {
 
     public Image pregunta1;
@@ -33,9 +35,26 @@ public class QuizRL : MonoBehaviour {
         respuesta2.GetComponentInChildren<Text>().text = mypregunta.respuesta2;
         respuesta3.GetComponentInChildren<Text>().text = mypregunta.respuesta3;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+    }
+    private void OnCollisionEnter(Collision col)
+    {
+            Debug.Log("respuesta 3");
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(" el obje entro al triger");
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("ESTA EN EL OBJ");
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("salio del obj");
+    }
 }
