@@ -16,7 +16,13 @@ public class login : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        // 1 si la sesion esta iniciada y 0 si no esta iniciada
+        int sesionActiva = PlayerPrefs.GetInt("SesionActiva", 0);
+        Debug.Log("numero de prefers "+sesionActiva);
+        if (sesionActiva == 1)
+        {
+            SceneManager.LoadScene("SpawningScene");
+        }
 	}
 	
 	// Update is called once per frame
@@ -42,6 +48,8 @@ public class login : MonoBehaviour {
         Debug.Log(www.text);
 
         if (www.text.Equals("login success")) {
+            PlayerPrefs.SetInt("SesionActiva", 1);
+            PlayerPrefs.SetString("no_control", no_control);
             SceneManager.LoadScene("SpawningScene");
         }
         else if (www.text.Equals("user not found")){
