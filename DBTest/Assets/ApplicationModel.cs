@@ -9,5 +9,7 @@ public class ApplicationModel
     public static int ponyActual = 0;
     public static int primeraMat = 0;
     public static int matActivas = 0;
+    public static string URLConsultas = "http://ihcmon.000webhostapp.com/consultas.php";
+    public static string URLInsert = "http://ihcmon.000webhostapp.com/inserts.php?";
 
 }

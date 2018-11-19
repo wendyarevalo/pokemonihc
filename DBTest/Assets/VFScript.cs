@@ -42,13 +42,13 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("se gano un pony");
             mensaje.text = " ¡¡ RESPUESTA CORRECTA !!";
-            SceneManager.LoadScene("AtraparPony");
+            AddMateria();
         }
         else
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("SpawningScene");
         }
     }
     public void btnv()
@@ -57,14 +57,41 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("se gano un pony");
             mensaje.text = " ¡¡ RESPUESTA CORRECTA !!";
-            SceneManager.LoadScene("AtraparPony");
+            AddMateria();
         }
         else
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
-            SceneManager.LoadScene("GameScene");
+
+            SceneManager.LoadScene("SpawningScene");
 
         }
+    }
+    public void AddMateria()
+    {
+        StartCoroutine(AddMateriaBD(PlayerPrefs.GetString("no_control")));
+    }
+
+    IEnumerator AddMateriaBD(string no_control)
+    {
+        Debug.Log("hilo ejecutandose " + no_control);
+        WWWForm form = new WWWForm();
+        form.AddField("funcion", "addmat_alumno");
+        form.AddField("parametros", "{\"id_materia\": "+ApplicationModel.ponyActual+",\"id_usuario\": "+no_control+"}");
+
+        WWW www = new WWW(ApplicationModel.URLInsert, form);
+
+        yield return www;
+        Debug.Log("recibo de url");
+        Debug.Log(" respuesta " + www.text);
+
+        if (www.text.Equals("insert correcto"))
+        {
+            Debug.Log("SE INSERTO CORRECTAMENTE EN LA BD");
+            SceneManager.LoadScene("SpawningScene");
+        }
+
+
     }
 }

@@ -9,7 +9,7 @@ public class login : MonoBehaviour {
 
     public TMP_InputField inputNoControl;
     public TMP_InputField inputNip;
-
+    public Text mensaje;
 
 
     string loginUserURL = "https://ihcmon.000webhostapp.com/loginUser.php";
@@ -53,7 +53,9 @@ public class login : MonoBehaviour {
             SceneManager.LoadScene("SpawningScene");
         }
         else if (www.text.Equals("user not found")){
-            
+            //necesitamos mostrar que el usr o pass es incorrecta en la interfaz
+            mensaje.text = "Usuario o contraseña incorrecta, intente de nuevo";
+
         }
         else{
            
