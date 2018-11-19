@@ -40,21 +40,21 @@ public class QuizRL : MonoBehaviour {
     void Update() {
 
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-            Debug.Log("respuesta 3");
-
+        Debug.Log("respuesta 3");
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(" el obje entro al triger");
     }
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("ESTA EN EL OBJ");
-    }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("salio del obj");
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("ESTA EN EL OBJ");
+    }
+    
 }

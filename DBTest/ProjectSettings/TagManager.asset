@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 1634342125
+    locked: 0
+  - name: Imagen
+    uniqueID: 558101359
+    locked: 0
+  - name: texto
+    uniqueID: 2332345949
+    locked: 0
