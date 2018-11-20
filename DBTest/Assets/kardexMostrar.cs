@@ -22,15 +22,15 @@ public class kardexMostrar : MonoBehaviour {
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
-            StartCoroutine(MostrarKardex("14121153"));
+            StartCoroutine(MostrarKardex(PlayerPrefs.GetString("no_control")));
         }
         else
         {
             gameObject.SetActive(true);
-            StartCoroutine(MostrarKardex("14121153"));
+            StartCoroutine(MostrarKardex(PlayerPrefs.GetString("no_control")));
         }
     }
-    
+
     IEnumerator MostrarKardex(string v)
     {
 
@@ -38,10 +38,10 @@ public class kardexMostrar : MonoBehaviour {
 
         WWWForm form = new WWWForm();
         form.AddField("funcion", "materias_usuario");
-        form.AddField("parametros", "14121153");
+        form.AddField("parametros", PlayerPrefs.GetString("no_control"));
 
 
-        WWW www = new WWW(MateriaUrl, form);
+        WWW www = new WWW(ApplicationModel.URLConsultas, form);
 
         yield return www;
 
