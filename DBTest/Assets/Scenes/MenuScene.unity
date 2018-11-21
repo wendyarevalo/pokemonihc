@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
-=======
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> 93c1517173f26cd9493fbeca368768cdc88f2991
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17579,18 +17575,10 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 1405843365}
-  - component: {fileID: 1405843368}
-  - component: {fileID: 1405843367}
-  - component: {fileID: 1405843366}
-  - component: {fileID: 1405843369}
-=======
   - component: {fileID: 1949527434}
   - component: {fileID: 1949527437}
   - component: {fileID: 1949527436}
   - component: {fileID: 1949527435}
->>>>>>> 93c1517173f26cd9493fbeca368768cdc88f2991
   m_Layer: 0
   m_Name: M6
   m_TagString: Untagged
@@ -17656,18 +17644,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1949527436}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1405843369}
-        m_MethodName: Toggle_Changed
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1949527436
@@ -17704,27 +17681,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1949527433}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
---- !u!114 &1405843369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1405843364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4b7fac460dad040a18d9fc4e103b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asistente: {fileID: 0}
-  ImagePony: {fileID: 0}
-  text: {fileID: 0}
-  Toggle: {fileID: 0}
-  Canvas: {fileID: 0}
---- !u!1 &1406815951
-=======
 --- !u!1 &1951055810
->>>>>>> 93c1517173f26cd9493fbeca368768cdc88f2991
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
