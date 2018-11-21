@@ -6,38 +6,33 @@ using UnityEngine.EventSystems;
 
 public class QuizRL : MonoBehaviour {
 
-   // public Image pregunta1;
-   // public Image pregunta2;
-    /*public Image pregunta3;
-    public Image respuesta1;
-    public Image respuesta2;
-    public Image respuesta3;*/
-    //public Sprite p1;
-    //public Sprite p2;
     public PreguntaR mypregunta;
-    public TextMesh t1;
-    private string UrlPregunta = "http://ihcmon.000webhostapp.com/consultas.php";
+    public TextMesh r1;
+    public TextMesh r2;
+    public TextMesh r3;
+    public TextMesh p1;
+    public TextMesh p2;
+    public TextMesh p3;
     // Use this for initialization
     IEnumerator Start()
     {
         WWWForm form = new WWWForm();
         form.AddField("funcion", "consultar_preguntaCol");
-        form.AddField("parametros", "{\"materia\": 3}");
+        form.AddField("parametros", "{\"materia\":"+4+"}");
 
-        WWW www = new WWW(UrlPregunta, form);
+        WWW www = new WWW(ApplicationModel.URLConsultas, form);
         yield return www;
         string json = www.text;
         mypregunta = new PreguntaR();
         JsonUtility.FromJsonOverwrite(json, mypregunta);
         Debug.Log(" json " + json);
         Debug.Log("" + mypregunta.respuesta1);
-        /*  pregunta1.GetComponentInChildren<Text>().text = mypregunta.pregunta1;
-          pregunta2.GetComponentInChildren<Text>().text = mypregunta.pregunta2;
-          pregunta3.GetComponentInChildren<Text>().text = mypregunta.pregunta3;
-          respuesta1.GetComponentInChildren<Text>().text = mypregunta.respuesta1;
-          respuesta2.GetComponentInChildren<Text>().text = mypregunta.respuesta2;
-          respuesta3.GetComponentInChildren<Text>().text = mypregunta.respuesta3;*/
-        t1.text = mypregunta.pregunta1;
+        p1.text = mypregunta.pregunta1;
+        p2.text = mypregunta.pregunta2;
+        p3.text = mypregunta.pregunta3;
+        r1.text = mypregunta.respuesta1;
+        r2.text = mypregunta.respuesta2;
+        r3.text = mypregunta.respuesta3;
     }
 
     // Update is called once per frame

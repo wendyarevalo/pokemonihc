@@ -54,7 +54,7 @@ public class BackpackManager : MonoBehaviour
             Debug.Log(aleatorio);
             switch (aleatorio) {
                 case 1:
-                    SceneManager.LoadScene("QuizRel");
+                    SceneManager.LoadScene("RelacionarQ");
                     break;
                 case 2:
                     SceneManager.LoadScene("QuizVF");
@@ -63,7 +63,7 @@ public class BackpackManager : MonoBehaviour
                     SceneManager.LoadScene("QuizMult");
                     break;
                 case 4:
-                    SceneManager.LoadScene("QuizRel");
+                    SceneManager.LoadScene("RelacionarQ");
                     break;
                 case 5:
                     SceneManager.LoadScene("QuizVF");
@@ -72,7 +72,7 @@ public class BackpackManager : MonoBehaviour
                     SceneManager.LoadScene("QuizMult");
                     break;
                 case 7:
-                    SceneManager.LoadScene("QuizRel");
+                    SceneManager.LoadScene("RelacionarQ");
                     break;
                 case 8:
                     SceneManager.LoadScene("QuizVF");

@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpawningScene.unity
     guid: 44317f73238f86d43a35a022db96451b
+  - enabled: 1
+    path: Assets/Scenes/RelacionarQ.unity
+    guid: ebafa2f55a8dd3a41a293af5cda1bb1c
   m_configObjects: {}
