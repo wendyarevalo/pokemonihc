@@ -9,7 +9,7 @@ public class kardexMostrar : MonoBehaviour {
     public UnityEngine.UI.Image[] Images;
     public UnityEngine.UI.Text[] Texts;
 
-    string MateriaUrl = "http://ihcmon.000webhostapp.com/consultas.php?funcion=materias_usuario&parametros=14121153";
+    string MateriaUrl = "http://ihcmon.000webhostapp.com/consultas.php";
 
     // Use this for initialization
     void Start () {
@@ -22,7 +22,7 @@ public class kardexMostrar : MonoBehaviour {
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
-            StartCoroutine(MostrarKardex(PlayerPrefs.GetString("no_control")));
+
         }
         else
         {
@@ -55,10 +55,10 @@ public class kardexMostrar : MonoBehaviour {
 
             /*string jsonString = "{\r\n    \"Items\": [\r\n        {\r\n            \"playerId\": \"8484239823\",\r\n            \"playerLoc\": \"Powai\",\r\n            \"playerNick\": \"Random Nick\"\r\n        },\r\n        {\r\n            \"playerId\": \"512343283\",\r\n            \"playerLoc\": \"User2\",\r\n            \"playerNick\": \"Rand Nick 2\"\r\n        }\r\n    ]\r\n}"*/
             KardexBd[] kardlist = JsonHelper.FromJson<KardexBd>("{\r\n    \"Items\":" + www.text + "\r\n}");
-            //     Debug.Log(kardlist[0].id_materia);
+            //   Debug.Log(kardlist[0].id_materia);
             //   Debug.Log(kardlist[1].id_materia);
 
-            for (int j = 0; j < 12; j++)
+            for (int j = 0; j < 54; j++)
             {
                 Images[j].enabled = false;
             }
