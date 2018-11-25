@@ -11,6 +11,8 @@ TagManager:
   - r1
   - r2
   - r3
+  - JuegoHombre
+  - JuegoMujer
   layers:
   - Default
   - TransparentFX

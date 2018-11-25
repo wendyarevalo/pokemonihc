@@ -20,11 +20,13 @@ public class MostrarAsistente : MonoBehaviour {
     void Start() {
         mostarAasistente = ApplicationModel.mostarAasistente;
         Toggle_Changed(mostarAasistente);
+        
 	}
     
 
     public void Toggle_Changed(bool newValue)
     {
+        ApplicationModel.mostarAasistente = newValue;
         if (newValue == true)
         {
             //showAsistente();
@@ -32,6 +34,7 @@ public class MostrarAsistente : MonoBehaviour {
             ImagePony.enabled = true;
             text.enabled = true;
             Toggle.enabled = true;
+            menu.enabled = false;
             ApplicationModel.mostarAasistente = true;
             Debug.Log("Se deberia mostar la imagen");
         }
@@ -41,8 +44,8 @@ public class MostrarAsistente : MonoBehaviour {
             ImagePony.enabled = false;
             text.enabled = false;
             Toggle.enabled = false;
-            ApplicationModel.mostarAasistente = false;
             menu.enabled = true;
+            ApplicationModel.mostarAasistente = false;
             Debug.Log("NO SE DEBERIA MOSTAR LA IMAGEN");
         }
     }
@@ -52,7 +55,6 @@ public class MostrarAsistente : MonoBehaviour {
         Instantiate(asistente, new Vector3(x, y, z), Quaternion.identity);
         Debug.Log("se mostro el asistente");
     }
-
 
 
 

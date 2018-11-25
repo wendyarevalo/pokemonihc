@@ -57,9 +57,6 @@ public class login : MonoBehaviour {
             mensaje.text = "Usuario o contraseña incorrecta, intente de nuevo";
 
         }
-        else{
-           
-        }
         
     }
 
