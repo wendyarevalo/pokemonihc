@@ -10,16 +10,18 @@ public class MostrarAsistente : MonoBehaviour {
     float x = -3.05f;
     float y = 0f;
     float z = 0f;
-    bool mostarAasistente;
+    bool mostarAasistente = ApplicationModel.mostarAasistente;
     public Image ImagePony;
     public Text text;
     public Toggle Toggle;
     public Canvas Canvas;
+    public Canvas menu;
 
     void Start() {
         mostarAasistente = ApplicationModel.mostarAasistente;
         Toggle_Changed(mostarAasistente);
 	}
+    
 
     public void Toggle_Changed(bool newValue)
     {
@@ -27,6 +29,10 @@ public class MostrarAsistente : MonoBehaviour {
         {
             //showAsistente();
             Canvas.enabled = true;
+            ImagePony.enabled = true;
+            text.enabled = true;
+            Toggle.enabled = true;
+            ApplicationModel.mostarAasistente = true;
             Debug.Log("Se deberia mostar la imagen");
         }
         else
@@ -35,15 +41,19 @@ public class MostrarAsistente : MonoBehaviour {
             ImagePony.enabled = false;
             text.enabled = false;
             Toggle.enabled = false;
+            ApplicationModel.mostarAasistente = false;
+            menu.enabled = true;
             Debug.Log("NO SE DEBERIA MOSTAR LA IMAGEN");
         }
     }
 
-    private void showAsistente()
+    public void showAsistente()
     {
         Instantiate(asistente, new Vector3(x, y, z), Quaternion.identity);
         Debug.Log("se mostro el asistente");
     }
+
+
 
 
 
