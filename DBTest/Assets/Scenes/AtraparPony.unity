@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pony:
-  - {fileID: 4776896310666888, guid: 58efcddb87748524596b257c4147c691, type: 2}
+  - {fileID: 4532189137479100, guid: 748f89dd7bd55c54f8e3d9410c628a6c, type: 2}
   - {fileID: 4846872525145190, guid: 793dfe0bb98ea1b44bd4e2ff64779244, type: 2}
   - {fileID: 4943935906193066, guid: aa8ae5c964d31664da80ce98f093292c, type: 2}
   - {fileID: 4758447101748890, guid: 01ed2a514615d5d4f9f19c26dcfc82f8, type: 2}

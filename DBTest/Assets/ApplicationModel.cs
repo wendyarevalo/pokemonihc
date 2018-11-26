@@ -14,4 +14,9 @@ public class ApplicationModel
 
 
     public static bool mostarAasistente = true;
+
+
+    public static List<GameObject> activos = new List<GameObject>();
+
+    public static int pasos = 0;
 }
