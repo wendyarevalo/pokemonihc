@@ -449,12 +449,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99111b7fc13809c438680c67977e42f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  juegoHombre: {fileID: 1079208764453822, guid: 52a6e2e7f8e449046b478bf92478bbb7,
+  juegoHombre: {fileID: 1471703139417042, guid: 52a6e2e7f8e449046b478bf92478bbb7,
     type: 2}
-  juegoMujer: {fileID: 1383719145006036, guid: 3d01af39055919d43a0ec7d0d709203d, type: 2}
-  juegoHombreInicial: {fileID: 1439325777708006, guid: 34c73c21301e7d8449c320f6e32ca686,
+  juegoMujer: {fileID: 1647132253873166, guid: 3ceb6e9ce1802cc4190147ea2cafe33a, type: 2}
+  juegoHombreInicial: {fileID: 1706379024609356, guid: 34c73c21301e7d8449c320f6e32ca686,
     type: 2}
-  juegoMujerInicial: {fileID: 1679235878944160, guid: 5598e189fa6a9b54999aa9e17a349c83,
+  juegoMujerInicial: {fileID: 1334571877391518, guid: 69541682340a4d84085f6e8afe510aa7,
     type: 2}
 --- !u!1 &421562071
 GameObject:
