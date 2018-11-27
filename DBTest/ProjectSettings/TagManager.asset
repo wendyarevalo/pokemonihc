@@ -11,8 +11,8 @@ TagManager:
   - r1
   - r2
   - r3
-  - puntuacion
-  - Npuntuacion
+  - JuegoHombre
+  - JuegoMujer
   layers:
   - Default
   - TransparentFX

@@ -12,4 +12,11 @@ public class ApplicationModel
     public static string URLConsultas = "http://ihcmon.000webhostapp.com/consultas.php";
     public static string URLInsert = "http://ihcmon.000webhostapp.com/inserts.php?";
 
+
+    public static bool mostarAasistente = true;
+
+
+    public static List<GameObject> activos = new List<GameObject>();
+
+    public static int pasos = 0;
 }

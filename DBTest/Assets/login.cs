@@ -21,7 +21,7 @@ public class login : MonoBehaviour {
         Debug.Log("numero de prefers "+sesionActiva);
         if (sesionActiva == 1)
         {
-            SceneManager.LoadScene("SpawningScene");
+            SceneManager.LoadScene("GameScene");
         }
 	}
 	
@@ -50,15 +50,12 @@ public class login : MonoBehaviour {
         if (www.text.Equals("login success")) {
             PlayerPrefs.SetInt("SesionActiva", 1);
             PlayerPrefs.SetString("no_control", no_control);
-            SceneManager.LoadScene("SpawningScene");
+            SceneManager.LoadScene("GameScene");
         }
         else if (www.text.Equals("user not found")){
             //necesitamos mostrar que el usr o pass es incorrecta en la interfaz
             mensaje.text = "Usuario o contraseña incorrecta, intente de nuevo";
 
-        }
-        else{
-           
         }
         
     }

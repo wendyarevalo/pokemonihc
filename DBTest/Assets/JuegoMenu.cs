@@ -26,7 +26,7 @@ public class JuegoMenu : MonoBehaviour
 
     public void volverJuego()
     {
-        SceneManager.LoadScene("SpawningScene");
+        SceneManager.LoadScene("GameScene");
     }
     public void VolverLogin()
     {
