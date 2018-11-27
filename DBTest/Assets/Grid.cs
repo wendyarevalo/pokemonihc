@@ -22,15 +22,16 @@ public class Grid : MonoBehaviour {
 		
 	}
     /* se manda al quiz que le corresponde*/
-    public void Entrenar_click()
+    public void Entrenar_click(int id)
     {
         Debug.Log("entrenar");
+        ApplicationModel.QuizEntrenar = id;
         aleatorio = rnd.Next(1, 11);
         Debug.Log(aleatorio);
         switch (aleatorio)
         {
             case 1:
-                SceneManager.LoadScene("RelacionarQ");
+                SceneManager.LoadScene("QuizVF");
                 break;
             case 2:
                 SceneManager.LoadScene("QuizVF");
@@ -39,7 +40,7 @@ public class Grid : MonoBehaviour {
                 SceneManager.LoadScene("QuizMult");
                 break;
             case 4:
-                SceneManager.LoadScene("RelacionarQ");
+                SceneManager.LoadScene("QuizVF");
                 break;
             case 5:
                 SceneManager.LoadScene("QuizVF");
@@ -48,7 +49,7 @@ public class Grid : MonoBehaviour {
                 SceneManager.LoadScene("QuizMult");
                 break;
             case 7:
-                SceneManager.LoadScene("RelacionarQ");
+                SceneManager.LoadScene("QuizVF");
                 break;
             case 8:
                 SceneManager.LoadScene("QuizVF");
@@ -96,9 +97,9 @@ public class Grid : MonoBehaviour {
                 img.sprite= materiasSprites[kardlist1[i].id_materia-1];
                 NewObj.transform.GetChild(0).GetComponent<Text>().text = ""+ kardlist1[i].nombre_materia;
                 //Sprite sprites = new Sprite("Spritesheet");
-                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click());
-               ApplicationModel.ponyActual = kardlist1[i].id_materia;
-                ApplicationModel.ponyId= kardlist1[i].id_materia;
+                int idbtn=kardlist1[i].id_materia;
+                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click(idbtn));
+               
             }
 
         }

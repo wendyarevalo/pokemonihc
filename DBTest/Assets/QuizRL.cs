@@ -18,7 +18,7 @@ public class QuizRL : MonoBehaviour {
     {
         WWWForm form = new WWWForm();
         form.AddField("funcion", "consultar_preguntaCol");
-        form.AddField("parametros", "{\"materia\":"+4+"}");
+        form.AddField("parametros", "{\"materia\":"+ ApplicationModel.ponyActual+ "}");
 
         WWW www = new WWW(ApplicationModel.URLConsultas, form);
         yield return www;
