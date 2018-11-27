@@ -22,7 +22,9 @@ public class Drag : MonoBehaviour
     void OnMouseUp()
     {
         isdragging = false;
-
+        //TextMesh puntos = GameObject.Find("Npuntuacion");
+        
+        
         switch (lastQuestion)
         {
             case 0:
@@ -30,6 +32,9 @@ public class Drag : MonoBehaviour
                 break;
             case 1:
                 Debug.Log("Colisionamos con p2 el objeto " + this.name);
+                break;
+            case 2:
+                Debug.Log("Colisionamos con p3 el objeto " + this.name);
                 break;
         }
     }
@@ -49,18 +54,25 @@ public class Drag : MonoBehaviour
         //Debug.Log(isdragging);
         
         if (collision.gameObject.tag == "p1")
-            {
+        {
                 
                 lastQuestion = 0;
                 lastQuestionSprite = collision.gameObject;
-            }
-            if (collision.gameObject.tag == "p2")
-            {
+        }
+        if (collision.gameObject.tag == "p2")
+        {
                 lastQuestion = 1;
                 lastQuestionSprite = collision.gameObject;
-                GameObject text = lastQuestionSprite.transform.GetChild(0).gameObject;
-            }
+               // GameObject text = lastQuestionSprite.transform.GetChild(0).gameObject;
         
+        }
+        if (collision.gameObject.tag == "p3")
+        {
+
+            lastQuestion = 2;
+            lastQuestionSprite = collision.gameObject;
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
