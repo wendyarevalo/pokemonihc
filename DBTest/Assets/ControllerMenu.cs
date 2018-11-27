@@ -10,4 +10,8 @@ public class ControllerMenu : MonoBehaviour {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("LoginScene");
     }
+    public void entrenar()
+    {
+        SceneManager.LoadScene("Entrenar");
+    }
 }

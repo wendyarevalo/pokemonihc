@@ -10,6 +10,7 @@ public class Grid : MonoBehaviour {
     public int numerToCreate;
     System.Random rnd = new System.Random();
     int aleatorio;
+    public Sprite[] materiasSprites = new Sprite[2];
     // Use this for initialization
     void Start () {
         iniciar();
@@ -20,9 +21,10 @@ public class Grid : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void Evolucionar_click()
+    /* se manda al quiz que le corresponde*/
+    public void Entrenar_click()
     {
-        Debug.Log("EVOLUCIONA");
+        Debug.Log("entrenar");
         aleatorio = rnd.Next(1, 11);
         Debug.Log(aleatorio);
         switch (aleatorio)
@@ -59,26 +61,14 @@ public class Grid : MonoBehaviour {
                 break;
         }
     }
-    void populate()
-    {
-        /*GameObject NewObj;
-        for (int i = 0; i < numerToCreate; i++)
-        {
-            NewObj = (GameObject)Instantiate(prefab, transform);
-            //NewObj.GetComponent<Image>().color = Random.ColorHSV();
-            NewObj.transform.GetChild(0).GetComponent<Text>().text="hello";
-
-        }*/
-    }
     public void iniciar()
     {
             StartCoroutine(MostrarKardex(PlayerPrefs.GetString("no_control")));   
     }
-
+    /*SE consultan las materias que estan en la BD para llenar el grid*/
     IEnumerator MostrarKardex(string v)
     {
 
-        //Texts[2].enabled = false;
         Debug.Log("NUMERO DE CONTROL "+ PlayerPrefs.GetString("no_control"));
         WWWForm form = new WWWForm();
         form.AddField("funcion", "materias_usuario");
@@ -94,11 +84,7 @@ public class Grid : MonoBehaviour {
 
         if (www.text != "")
         {
-
-            //JsonUtility.FromJsonOverwrite(www.text, kardList);
-
-            /*string jsonString = "{\r\n    \"Items\": [\r\n        {\r\n            \"playerId\": \"8484239823\",\r\n            \"playerLoc\": \"Powai\",\r\n            \"playerNick\": \"Random Nick\"\r\n        },\r\n        {\r\n            \"playerId\": \"512343283\",\r\n            \"playerLoc\": \"User2\",\r\n            \"playerNick\": \"Rand Nick 2\"\r\n        }\r\n    ]\r\n}"*/
-            KardexBd[] kardlist1 = JsonHelper.FromJson<KardexBd>("{\r\n    \"Items\":" + www.text + "\r\n}");
+             KardexBd[] kardlist1 = JsonHelper.FromJson<KardexBd>("{\r\n    \"Items\":" + www.text + "\r\n}");
 
             Debug.Log(kardlist1.Length);
             numerToCreate = kardlist1.Length;
@@ -106,15 +92,13 @@ public class Grid : MonoBehaviour {
             {
                 GameObject NewObj;
                     NewObj = (GameObject)Instantiate(prefab, transform);
-                    NewObj.transform.GetChild(0).GetComponent<Text>().text = ""+ kardlist1[i].nombre_materia;
-                Debug.Log("ACTIVAR "+ kardlist1[i].seriada);
-                if (kardlist1[i].seriada == 0)
-                {
-                    //NewObj.transform.GetChild(1).GetComponent<Button>().enabled = false;
-                    NewObj.GetComponentInChildren<Button>().enabled = false;
-                }
-                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Evolucionar_click());
+                Image img = NewObj.GetComponent<Image>();
+                img.sprite= materiasSprites[kardlist1[i].id_materia-1];
+                NewObj.transform.GetChild(0).GetComponent<Text>().text = ""+ kardlist1[i].nombre_materia;
+                //Sprite sprites = new Sprite("Spritesheet");
+                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click());
                ApplicationModel.ponyActual = kardlist1[i].id_materia;
+                ApplicationModel.ponyId= kardlist1[i].id_materia;
             }
 
         }
