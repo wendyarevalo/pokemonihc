@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Validaciones : MonoBehaviour {
 
@@ -10,13 +12,23 @@ public class Validaciones : MonoBehaviour {
     public GameObject juegoHombreInicial;
     public GameObject juegoMujerInicial;
     public Camera camaraPony;
+    public Image imgMujer;
+    public Image imgHombre;
+    public TMP_Text txtNombre;
+    public TMP_Text txtSemestre;
 
     // Use this for initialization
     void Start () {
         camaraPony.enabled = true;
+        imgHombre.enabled = false;
+        imgMujer.enabled = false;
+        txtNombre.text = PlayerPrefs.GetString("nombre","Fulanx");
+        txtSemestre.text = (""+PlayerPrefs.GetInt("nivel",1));
         StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control","14121150")));
         
     }
+
+    
 
     IEnumerator ConocerGenero(string numero) {
 
@@ -44,13 +56,16 @@ public class Validaciones : MonoBehaviour {
 
         if (www.text.Equals("m"))
         {
+            
             if (www2.text != "0")
             {
                 camaraPony.enabled = false;
+                imgHombre.enabled = true;
                 Instantiate(juegoHombre, juegoHombre.transform.position, juegoHombre.transform.rotation);
             }
             else {
                 camaraPony.enabled = false;
+                imgHombre.enabled = true;
                 Instantiate(juegoHombreInicial, juegoHombreInicial.transform.position, juegoHombreInicial.transform.rotation);
             }
             
@@ -59,11 +74,13 @@ public class Validaciones : MonoBehaviour {
             if (www2.text != "0")
             {
                 camaraPony.enabled = false;
+                imgMujer.enabled = true;
                 Instantiate(juegoMujer, juegoMujer.transform.position, juegoMujer.transform.rotation);
             }
             else
             {
                 camaraPony.enabled = false;
+                imgMujer.enabled = true;
                 Instantiate(juegoMujerInicial, juegoMujerInicial.transform.position, juegoMujerInicial.transform.rotation);
             }
             
