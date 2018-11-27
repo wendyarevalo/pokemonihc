@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 07a289795790e154398f3e7211df92e7
+  - enabled: 1
+    path: Assets/Scenes/Entrenar.unity
+    guid: a9918b478d23ea54eac276d617eeba72
   m_configObjects: {}
