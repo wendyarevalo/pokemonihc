@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 65892764925416580}
   - component: {fileID: 114452777820196876}
   m_Layer: 0
-  m_Name: pony1
+  m_Name: ponyChico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

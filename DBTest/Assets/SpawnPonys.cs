@@ -34,7 +34,7 @@ public class SpawnPonys : MonoBehaviour {
         yield return new WaitForSeconds(5f);
         WWWForm form = new WWWForm();
         form.AddField("funcion", "materia_nivel");
-        form.AddField("parametros", 1);
+        form.AddField("parametros", PlayerPrefs.GetString("nivel"));
 
         WWW www = new WWW(consultaMateriaURL, form);
 

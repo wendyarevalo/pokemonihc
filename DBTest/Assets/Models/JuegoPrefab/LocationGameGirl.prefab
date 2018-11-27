@@ -3038,7 +3038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pony:
-  - {fileID: 1530832966651786, guid: 4c2fe40884297b940b2e23182238f707, type: 2}
+  - {fileID: 1969524347479302, guid: ee1ddc10b26e2e7419fe82ca942956d1, type: 2}
   - {fileID: 1779812404488648, guid: 3a77b6d3a05ad90409ee34efd722e37a, type: 2}
   - {fileID: 1504061907703920, guid: 3ef70ed238549c24dbe657181ac60390, type: 2}
   - {fileID: 1435846070546022, guid: 0837beeb7083b814aa3fc5a18bc963ab, type: 2}

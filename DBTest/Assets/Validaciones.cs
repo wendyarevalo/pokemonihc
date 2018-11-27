@@ -22,9 +22,9 @@ public class Validaciones : MonoBehaviour {
         camaraPony.enabled = true;
         imgHombre.enabled = false;
         imgMujer.enabled = false;
-        txtNombre.text = PlayerPrefs.GetString("nombre","Fulanx");
-        txtSemestre.text = (""+PlayerPrefs.GetInt("nivel",1));
-        StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control","14121150")));
+        
+        StartCoroutine(ConocerNivel(PlayerPrefs.GetString("no_control", "14121153")));
+        StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control","14121153")));
         
     }
 
@@ -87,5 +87,35 @@ public class Validaciones : MonoBehaviour {
         }
 
 
+    }
+
+    IEnumerator ConocerNivel(string numero) {
+
+        WWWForm form = new WWWForm();
+        form.AddField("funcion", "nivel_alumno");
+        form.AddField("parametros", numero);
+
+
+        WWW www = new WWW(ApplicationModel.URLConsultas, form);
+
+        yield return www;
+
+        Debug.Log(www.text);
+
+        WWWForm form2 = new WWWForm();
+        form2.AddField("funcion", "nombre_alumno");
+        form2.AddField("parametros", numero);
+
+        WWW www2 = new WWW(ApplicationModel.URLConsultas, form2);
+
+        yield return www2;
+
+        Debug.Log(www2.text);
+
+        PlayerPrefs.SetString("nombre", www2.text);
+        PlayerPrefs.SetString("nivel", www.text);
+
+        txtNombre.text = PlayerPrefs.GetString("nombre", "Fulanx");
+        txtSemestre.text = ("" + PlayerPrefs.GetString("nivel", "1"));
     }
 }
