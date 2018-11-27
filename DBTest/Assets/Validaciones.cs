@@ -9,10 +9,11 @@ public class Validaciones : MonoBehaviour {
     public GameObject juegoMujer;
     public GameObject juegoHombreInicial;
     public GameObject juegoMujerInicial;
+    public Camera camaraPony;
 
     // Use this for initialization
     void Start () {
-
+        camaraPony.enabled = true;
         StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control","14121150")));
         
     }
@@ -45,9 +46,11 @@ public class Validaciones : MonoBehaviour {
         {
             if (www2.text != "0")
             {
+                camaraPony.enabled = false;
                 Instantiate(juegoHombre, juegoHombre.transform.position, juegoHombre.transform.rotation);
             }
             else {
+                camaraPony.enabled = false;
                 Instantiate(juegoHombreInicial, juegoHombreInicial.transform.position, juegoHombreInicial.transform.rotation);
             }
             
@@ -55,10 +58,12 @@ public class Validaciones : MonoBehaviour {
         else {
             if (www2.text != "0")
             {
+                camaraPony.enabled = false;
                 Instantiate(juegoMujer, juegoMujer.transform.position, juegoMujer.transform.rotation);
             }
             else
             {
+                camaraPony.enabled = false;
                 Instantiate(juegoMujerInicial, juegoMujerInicial.transform.position, juegoMujerInicial.transform.rotation);
             }
             

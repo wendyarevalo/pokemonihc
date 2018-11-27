@@ -18,10 +18,9 @@ public class SpawnPonys : MonoBehaviour {
 	void Update () {
 
         ApplicationModel.pasos++;
-        if (ApplicationModel.pasos % 300 == 0)
+        if (ApplicationModel.pasos % 200 == 0)
         {
-            Debug.Log("X: " + this.transform.position.x + ", Y: " + this.transform.position.y + ", Z: " + this.transform.position.z);
-
+            
             StartCoroutine(GetMateria(new Vector2(this.transform.position.x, this.transform.position.z)));
 
             ApplicationModel.pasos = 0;
@@ -51,7 +50,7 @@ public class SpawnPonys : MonoBehaviour {
         System.Random rnd = new System.Random();
         
 
-        Vector3 newpos = new Vector3(pos.x + rnd.Next(5, 20), 3, pos.y + rnd.Next(5, 20));
+        Vector3 newpos = new Vector3(pos.x + rnd.Next(5,10), 3, pos.y + rnd.Next(5, 10));
 
 
         if (ApplicationModel.activos.Count > 2)
@@ -62,7 +61,10 @@ public class SpawnPonys : MonoBehaviour {
             ApplicationModel.activos.Clear();
         }
         else {
-            ApplicationModel.activos.Add(Instantiate(pony[materia.id_materia - 1], newpos, Quaternion.identity));
+            ApplicationModel.activos.Add(Instantiate(pony[materia.id_materia - 1], newpos,Quaternion.identity));
+            Debug.Log(ApplicationModel.activos[ApplicationModel.activos.Count - 1].transform.position.x + " Mono " + this.transform.position.x);
+            Debug.Log(ApplicationModel.activos[ApplicationModel.activos.Count - 1].transform.position.z + " Mono " + this.transform.position.z);
+
         }
         
             
