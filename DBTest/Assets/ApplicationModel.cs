@@ -19,4 +19,8 @@ public class ApplicationModel
     public static List<GameObject> activos = new List<GameObject>();
 
     public static int pasos = 0;
+
+
+    public static int aciertos = 0;
+    public static int intentos = 3;
 }
