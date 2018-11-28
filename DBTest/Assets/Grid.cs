@@ -22,44 +22,46 @@ public class Grid : MonoBehaviour {
 		
 	}
     /* se manda al quiz que le corresponde*/
-    public void Entrenar_click()
+    public void Entrenar_click(int id)
     {
         Debug.Log("entrenar");
+        ApplicationModel.QuizEntrenar = id;
+        ApplicationModel.entrenar = true;
         aleatorio = rnd.Next(1, 11);
         Debug.Log(aleatorio);
-        switch (aleatorio)
-        {
-            case 1:
-                SceneManager.LoadScene("RelacionarQ");
-                break;
-            case 2:
-                SceneManager.LoadScene("QuizVF");
-                break;
-            case 3:
+         switch (aleatorio)
+         {
+             case 1:
                 SceneManager.LoadScene("QuizMult");
                 break;
-            case 4:
-                SceneManager.LoadScene("RelacionarQ");
-                break;
-            case 5:
-                SceneManager.LoadScene("QuizVF");
-                break;
-            case 6:
+             case 2:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 3:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 4:
                 SceneManager.LoadScene("QuizMult");
                 break;
-            case 7:
-                SceneManager.LoadScene("RelacionarQ");
-                break;
-            case 8:
-                SceneManager.LoadScene("QuizVF");
-                break;
-            case 9:
+             case 5:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 6:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 7:
                 SceneManager.LoadScene("QuizMult");
                 break;
-            case 10:
-                SceneManager.LoadScene("QuizVF");
-                break;
-        }
+             case 8:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 9:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 10:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+         }
     }
     public void iniciar()
     {
@@ -96,9 +98,8 @@ public class Grid : MonoBehaviour {
                 img.sprite= materiasSprites[kardlist1[i].id_materia-1];
                 NewObj.transform.GetChild(0).GetComponent<Text>().text = ""+ kardlist1[i].nombre_materia;
                 //Sprite sprites = new Sprite("Spritesheet");
-                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click());
-               ApplicationModel.ponyActual = kardlist1[i].id_materia;
-                ApplicationModel.ponyId= kardlist1[i].id_materia;
+                int id = kardlist1[i].id_materia;
+                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click(id));
             }
 
         }
