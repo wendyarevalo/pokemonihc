@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Validaciones : MonoBehaviour {
 
@@ -114,8 +115,19 @@ public class Validaciones : MonoBehaviour {
 
         PlayerPrefs.SetString("nombre", www2.text);
         PlayerPrefs.SetString("nivel", www.text);
+       
 
         txtNombre.text = PlayerPrefs.GetString("nombre", "Fulanx");
         txtSemestre.text = ("" + PlayerPrefs.GetString("nivel", "1"));
+
+
+        //funcion para saber los creditos del usuario
+        PlayerPrefs.SetString("creditos", "0");
+
+        if (PlayerPrefs.GetString("creditos","0").Equals("168"))
+        {
+            SceneManager.LoadScene("EligeScene");
+        }
+
     }
 }

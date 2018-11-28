@@ -23,4 +23,5 @@ public class ApplicationModel
 
     public static int aciertos = 0;
     public static int intentos = 3;
+    
 }
