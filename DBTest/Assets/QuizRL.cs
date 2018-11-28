@@ -20,9 +20,18 @@ public class QuizRL : MonoBehaviour {
     IEnumerator Start()
     {
         WWWForm form = new WWWForm();
-        form.AddField("funcion", "consultar_preguntaCol");
-        form.AddField("parametros", "{\"materia\":"+4+"}");
+        if (ApplicationModel.entrenar)
+        {
+            form.AddField("funcion", "consultar_preguntaCol");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.QuizEntrenar + "}");
 
+        }
+        else
+        {
+            form.AddField("funcion", "consultar_preguntaCol");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.ponyId + "}");
+
+        }
         WWW www = new WWW(ApplicationModel.URLConsultas, form);
         yield return www;
         string json = www.text;

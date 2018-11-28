@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ArrastraPregunta : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -80,10 +81,61 @@ public class ArrastraPregunta : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         other.enabled = false;
         ApplicationModel.intentos--;
         intentos.text = ApplicationModel.intentos.ToString();
+        if (ApplicationModel.intentos == 0)
+        {
+            if (ApplicationModel.intentos == 3)
+            {
+                //agregar a la BD
+                if (ApplicationModel.entrenar)
+                {
+                    ApplicationModel.entrenar = false;
+                    SceneManager.LoadScene("GameScene");
+                }
+                else
+                {
+                    //mandar a bd add mat
+                    AddMateria();
+
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene("GameScene");
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene("GameScene");
+        }
     }
 
 
+    public void AddMateria()
+    {
+        StartCoroutine(AddMateriaBD(PlayerPrefs.GetString("no_control")));
+    }
 
+    IEnumerator AddMateriaBD(string no_control)
+    {
+        Debug.Log("hilo ejecutandose " + no_control);
+        WWWForm form = new WWWForm();
+        form.AddField("funcion", "addmat_alumno");
+        form.AddField("parametros", "{\"id_materia\": " + ApplicationModel.ponyId + ",\"id_usuario\": " + no_control + "}");
+
+        WWW www = new WWW(ApplicationModel.URLInsert, form);
+
+        yield return www;
+        Debug.Log("recibo de url");
+        Debug.Log(" respuesta " + www.text);
+
+        if (www.text.Equals("insert correcto"))
+        {
+            Debug.Log("SE INSERTO CORRECTAMENTE EN LA BD");
+            SceneManager.LoadScene("GameScene");
+        }
+
+
+    }
 
 
 }

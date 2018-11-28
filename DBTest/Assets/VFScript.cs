@@ -16,8 +16,16 @@ public class VFScript : MonoBehaviour {
         // traer la pregunta y respuesta de acuerdo al id de la materia
         pregunta.text = "cargando ...";
         WWWForm form = new WWWForm();
-        form.AddField("funcion", "consultar_preguntaVF");
-        form.AddField("parametros", "{\"materia\":"+ ApplicationModel.ponyActual+"}");
+        if (ApplicationModel.entrenar)
+        {
+            form.AddField("funcion", "consultar_preguntaVF");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.QuizEntrenar+ "}");
+        }
+        else
+        {
+            form.AddField("funcion", "consultar_preguntaVF");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.ponyId + "}");
+        }
 
         WWW www = new WWW(UrlPregunta, form);
         yield return www;
@@ -42,13 +50,21 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("se gano un pony");
             mensaje.text = " ¡¡ RESPUESTA CORRECTA !!";
-            AddMateria();
+            if (ApplicationModel.entrenar)
+            {
+                ApplicationModel.entrenar = false;
+                SceneManager.LoadScene("GameScene");
+            }
+            else
+            {
+                AddMateria();
+            }
         }
         else
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
-            SceneManager.LoadScene("SpawningScene");
+            SceneManager.LoadScene("GameScene");
         }
     }
     public void btnv()
@@ -57,14 +73,23 @@ public class VFScript : MonoBehaviour {
         {
             Debug.Log("se gano un pony");
             mensaje.text = " ¡¡ RESPUESTA CORRECTA !!";
-            AddMateria();
+            if (ApplicationModel.entrenar)
+            {
+                ApplicationModel.entrenar = false;
+                SceneManager.LoadScene("GameScene");
+            }
+            else
+            {
+                AddMateria();
+            }
+           
         }
         else
         {
             Debug.Log("el pony escapo ... suerte para la proxima");
             mensaje.text = " ¡¡ RESPUESTA INCORRECTA, SUERTE PARA LA PROXIMA!!";
 
-            SceneManager.LoadScene("SpawningScene");
+            SceneManager.LoadScene("GameScene");
 
         }
     }
@@ -78,7 +103,7 @@ public class VFScript : MonoBehaviour {
         Debug.Log("hilo ejecutandose " + no_control);
         WWWForm form = new WWWForm();
         form.AddField("funcion", "addmat_alumno");
-        form.AddField("parametros", "{\"id_materia\": "+ApplicationModel.ponyActual+",\"id_usuario\": "+no_control+"}");
+        form.AddField("parametros", "{\"id_materia\": "+ApplicationModel.ponyId+",\"id_usuario\": "+no_control+"}");
 
         WWW www = new WWW(ApplicationModel.URLInsert, form);
 
@@ -89,7 +114,7 @@ public class VFScript : MonoBehaviour {
         if (www.text.Equals("insert correcto"))
         {
             Debug.Log("SE INSERTO CORRECTAMENTE EN LA BD");
-            SceneManager.LoadScene("SpawningScene");
+            SceneManager.LoadScene("GameScene");
         }
 
 
