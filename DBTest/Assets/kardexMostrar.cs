@@ -45,7 +45,7 @@ public class kardexMostrar : MonoBehaviour {
 
         yield return www;
 
-        Debug.Log(www.text);
+       // Debug.Log(www.text);
 
 
         if (www.text != "")
@@ -58,22 +58,42 @@ public class kardexMostrar : MonoBehaviour {
             //   Debug.Log(kardlist[0].id_materia);
             //   Debug.Log(kardlist[1].id_materia);
 
-            for (int j = 0; j < 54; j++)
+            for (int j = 0; j < 61; j++)
             {
                 Images[j].enabled = false;
             }
 
-            Debug.Log(kardlist.Length);
+            Debug.Log(kardlist.Length + "length");
             for (int i = 0; i < kardlist.Length; i++)
             {
+                Debug.Log(i +"i");
                 Images[kardlist[i].id_materia - 1].enabled = true;
-                Texts[kardlist[i].id_materia - 1].enabled = false;
+
+                if (kardlist[i].id_materia == 39 || kardlist[i].id_materia == 44 || kardlist[i].id_materia == 43)
+                {
+                    Texts[38].enabled = false;
+                }
+                else if (kardlist[i].id_materia == 47 || kardlist[i].id_materia == 51 || kardlist[i].id_materia == 53)
+                {
+                    Texts[46].enabled = false;
+                }
+                else if (kardlist[i].id_materia == 48 || kardlist[i].id_materia == 52 || kardlist[i].id_materia == 54)
+                {
+                    Texts[47].enabled = false;
+                }
+                else if (kardlist[i].id_materia == 56 || kardlist[i].id_materia == 58 || kardlist[i].id_materia == 60)
+                {
+                    Texts[55].enabled = false;
+                }
+                else if (kardlist[i].id_materia == 57 || kardlist[i].id_materia == 59 || kardlist[i].id_materia == 61)
+                {
+                    Texts[56].enabled = false;
+                }
+                else
+                {
+                    Texts[kardlist[i].id_materia - 1].enabled = false;
+                }
             }
-
-            
-
- 
-
         }
 
             /*kardexBd myObject = JsonUtility.FromJson<kardexBd>(www.text);

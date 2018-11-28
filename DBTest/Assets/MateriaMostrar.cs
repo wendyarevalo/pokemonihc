@@ -40,6 +40,11 @@ public class MateriaMostrar : MonoBehaviour
         }
     }
 
+    public void iniciarEsp(int x, int y, int z)
+    {
+
+    }
+
     IEnumerator MostrarMateria(string v, int a)
     {
 
@@ -73,15 +78,7 @@ public class MateriaMostrar : MonoBehaviour
                     mensaje.text = kardlist2[i].nombre_materia;
                     Objetivo.text = kardlist2[i].objetivos;
                     Creditos.text = "Creditos: " + kardlist2[i].creditos;
-                    if (i < 3)
-                    {
-                        Imagen.sprite = Sprites[i];
-                    }
-                    else
-                    {
-                        Imagen.sprite = Sprites[2];
-                    }
-                    
+                    Imagen.sprite = Sprites[kardlist2[i].id_materia-1]; 
                 }
             }
             

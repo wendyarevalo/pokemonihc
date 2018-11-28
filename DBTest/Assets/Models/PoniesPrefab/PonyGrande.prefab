@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 65050609978311940}
   - component: {fileID: 54252848208387186}
   m_Layer: 0
-  m_Name: Pony1G
+  m_Name: PonyGrande
   m_TagString: Pony
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
