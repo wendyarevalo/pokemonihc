@@ -24,8 +24,8 @@ public class Validaciones : MonoBehaviour {
         imgHombre.enabled = false;
         imgMujer.enabled = false;
         
-        StartCoroutine(ConocerNivel(PlayerPrefs.GetString("no_control", "14121153")));
-        StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control","14121153")));
+        StartCoroutine(ConocerNivel(PlayerPrefs.GetString("no_control", "14121149")));
+        StartCoroutine(ConocerGenero(PlayerPrefs.GetString("no_control", "14121149")));
         
     }
 
@@ -122,7 +122,16 @@ public class Validaciones : MonoBehaviour {
 
 
         //funcion para saber los creditos del usuario
-        PlayerPrefs.SetString("creditos", "0");
+        WWWForm form3 = new WWWForm();
+        form3.AddField("funcion", "creditos_alumno");
+        form3.AddField("parametros", numero);
+
+        WWW www3 = new WWW(ApplicationModel.URLConsultas, form3);
+
+        yield return www3;
+
+        Debug.Log("creditos: "+www3.text);
+        PlayerPrefs.SetString("creditos", www3.text);
 
         if (PlayerPrefs.GetString("creditos","0").Equals("168"))
         {
