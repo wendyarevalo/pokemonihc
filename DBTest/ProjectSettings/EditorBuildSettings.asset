@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Entrenar.unity
     guid: a9918b478d23ea54eac276d617eeba72
+  - enabled: 1
+    path: Assets/Scenes/EligeScene.unity
+    guid: f956eca548977854e83e92200b37d7ca
   m_configObjects: {}
