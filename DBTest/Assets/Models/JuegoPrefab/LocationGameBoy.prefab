@@ -52,7 +52,6 @@ GameObject:
   - component: {fileID: 4630297681938622}
   - component: {fileID: 114970603267419508}
   - component: {fileID: 114264485957013726}
-  - component: {fileID: 114315484615611372}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -2782,25 +2781,6 @@ MonoBehaviour:
   _updateInterval: 0.1
   _sendEvent: 0
   _locationLogFile: {fileID: 4900000, guid: 817c5a40f553e4555a5a5ace19d292bb, type: 3}
---- !u!114 &114315484615611372
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1012068544233482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf32ea2cc0514b569329f6b6b68f9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _map: {fileID: 114970603267419508}
-  _locationStrings:
-  - 19.374327, -99.25937
-  - 19.374347, -99.25947
-  - 19.374227, -99.25837
-  _spawnScale: 100
-  _markerPrefab: {fileID: 1969524347479302, guid: ee1ddc10b26e2e7419fe82ca942956d1,
-    type: 2}
 --- !u!114 &114348521116456182
 MonoBehaviour:
   m_ObjectHideFlags: 1

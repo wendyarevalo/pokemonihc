@@ -23,9 +23,23 @@ public class QuizML : MonoBehaviour {
         // traer la pregunta y respuesta de acuerdo al id de la materia
         pregunta.text = "cargando ...";
         WWWForm form = new WWWForm();
+<<<<<<< HEAD
         form.AddField("funcion", "consultar_preguntaMultiple");
         form.AddField("parametros", "{\"materia\":"+ ApplicationModel.QuizEntrenar+"}");
+=======
+        if (ApplicationModel.entrenar)
+        {
+            form.AddField("funcion", "consultar_preguntaMultiple");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.QuizEntrenar + "}");
 
+        }
+        else
+        {
+            form.AddField("funcion", "consultar_preguntaMultiple");
+            form.AddField("parametros", "{\"materia\":" + ApplicationModel.ponyId + "}");
+>>>>>>> 97fe044b4a0209039b187721d8ca3690a2b30b37
+
+        }
         WWW www = new WWW(UrlPregunta, form);
         yield return www;
         string json = www.text;
@@ -54,7 +68,15 @@ public class QuizML : MonoBehaviour {
             //atrapo al pony
             Debug.Log(" ATRAPO PONY");
             mensaje.text = " ¡¡ RESPUESTA CORRECTA !!";
-            AddMateria();
+            if (ApplicationModel.entrenar)
+            {
+                ApplicationModel.entrenar = false;
+                SceneManager.LoadScene("GameScene");
+            }
+            else
+            {
+                AddMateria();
+            }
         }
         else
         {
@@ -86,7 +108,11 @@ public class QuizML : MonoBehaviour {
         Debug.Log("hilo ejecutandose " + no_control);
         WWWForm form = new WWWForm();
         form.AddField("funcion", "addmat_alumno");
+<<<<<<< HEAD
         form.AddField("parametros", "{\"id_materia\": " + ApplicationModel.QuizEntrenar + ",\"id_usuario\": " + no_control + "}");
+=======
+        form.AddField("parametros", "{\"id_materia\": " + ApplicationModel.ponyId + ",\"id_usuario\": " + no_control + "}");
+>>>>>>> 97fe044b4a0209039b187721d8ca3690a2b30b37
 
         WWW www = new WWW(ApplicationModel.URLInsert, form);
 

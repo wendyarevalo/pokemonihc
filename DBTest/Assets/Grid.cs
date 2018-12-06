@@ -27,6 +27,7 @@ public class Grid : MonoBehaviour {
     {
         Debug.Log("entrenar");
         ApplicationModel.QuizEntrenar = id;
+<<<<<<< HEAD
         aleatorio = rnd.Next(1, 11);
         Debug.Log(aleatorio);
        // GameObject NewObj = (GameObject)Instantiate(prefabs[0], transform);
@@ -63,6 +64,44 @@ public class Grid : MonoBehaviour {
                 SceneManager.LoadScene("EntrenarQuizMul");
                 break;
         }
+=======
+        ApplicationModel.entrenar = true;
+        aleatorio = rnd.Next(1, 11);
+        Debug.Log(aleatorio);
+         switch (aleatorio)
+         {
+             case 1:
+                SceneManager.LoadScene("QuizMult");
+                break;
+             case 2:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 3:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 4:
+                SceneManager.LoadScene("QuizMult");
+                break;
+             case 5:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 6:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 7:
+                SceneManager.LoadScene("QuizMult");
+                break;
+             case 8:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+             case 9:
+                 SceneManager.LoadScene("QuizRelacional");
+                 break;
+             case 10:
+                 SceneManager.LoadScene("QuizVF");
+                 break;
+         }
+>>>>>>> 97fe044b4a0209039b187721d8ca3690a2b30b37
     }
     public void iniciar()
     {
@@ -99,9 +138,14 @@ public class Grid : MonoBehaviour {
                 img.sprite= materiasSprites[kardlist1[i].id_materia-1];
                 NewObj.transform.GetChild(0).GetComponent<Text>().text = ""+ kardlist1[i].nombre_materia;
                 //Sprite sprites = new Sprite("Spritesheet");
+<<<<<<< HEAD
                 int idbtn=kardlist1[i].id_materia;
                 NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click(idbtn));
                
+=======
+                int id = kardlist1[i].id_materia;
+                NewObj.GetComponentInChildren<Button>().onClick.AddListener(() => Entrenar_click(id));
+>>>>>>> 97fe044b4a0209039b187721d8ca3690a2b30b37
             }
 
         }
